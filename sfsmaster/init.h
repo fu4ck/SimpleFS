@@ -1,6 +1,8 @@
 //
 // Created by xudong on 2021/8/28.
 //
+#include "matochunkserver.h"
+
 
 typedef int (*runfn)(void);
 
@@ -9,5 +11,7 @@ struct {
     char *name;
 } RunTab[] = {
         //TODO
-        {matochunkserver_init, "communication with chunkserver"},
+        {metadata_init, "metadata init thread"},
+        {matocsserv_init, "communication with chunkserver"},
+        {matoclserv_init, "communication with client fuse"}
 };
